@@ -1,10 +1,11 @@
 import { useState } from "react";
 
 import FetchAPI from "./apiCallMethod/FetchAPI.jsx";
+import Axios from "./apiCallMethod/Axios.jsx";
 
 const COMPONENT_MAP = {
   "fetch API": FetchAPI,
-  // 다른 컴포넌트들도 이와 유사하게 매핑
+  axios: Axios,
 };
 
 export default function ApiCallSection({ selectExample }) {
