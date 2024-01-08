@@ -1,18 +1,41 @@
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 
-export default function SelectCodeSection() {
-  const buttonText = ["fetch API", "axios", "custom Hook", "useFetch", "SWR"];
+import ApiCallSection from "./ApiCallSection.jsx";
+
+export default function SelectCodeSection({ selectedMethod }) {
+  const [selectExample, setSelectExample] = useState();
+
+  const buttonText =
+    {
+      "fetch-method": ["fetch API", "axios", "custom Hook", "useFetch", "SWR"],
+      test1: ["test1", "test1", "test1"],
+      test2: ["test2", "test2"],
+    }[selectedMethod] || [];
+
+  const handleMethodSelect = ({ target }) => {
+    const method = target.dataset.method;
+    if (method) setSelectExample(method);
+  };
 
   return (
-    <ul style={ulStyle}>
-      {buttonText.map((text, idx) => {
-        return (
-          <li key={idx}>
-            <StyledButton>{text}</StyledButton>
-          </li>
-        );
-      })}
-    </ul>
+    <>
+      <ul style={ulStyle} onClick={handleMethodSelect}>
+        {buttonText.map((text, idx) => {
+          return (
+            <li key={idx}>
+              <StyledButton
+                style={selectExample === text ? { textDecoration: "underline" } : null}
+                data-method={text}
+              >
+                {text}
+              </StyledButton>
+            </li>
+          );
+        })}
+      </ul>
+      <ApiCallSection selectExample={selectExample} />
+    </>
   );
 }
 
