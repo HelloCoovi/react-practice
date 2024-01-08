@@ -8,7 +8,7 @@ export default function SelectCodeSection({ selectedMethod }) {
 
   const buttonText =
     {
-      "fetch-method": ["fetch API", "axios", "custom Hook", "useFetch", "SWR"],
+      "fetch-method": ["fetch API", "axios", "custom Hook", "SWR"],
     }[selectedMethod] || [];
 
   const handleMethodSelect = ({ target }) => {
