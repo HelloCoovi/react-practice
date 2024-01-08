@@ -3,11 +3,13 @@ import { useState } from "react";
 import FetchAPI from "./apiCallMethod/FetchAPI.jsx";
 import Axios from "./apiCallMethod/Axios.jsx";
 import CustomHook from "./apiCallMethod/customHook.jsx";
+import SWR from "./apiCallMethod/SWR.jsx";
 
 const COMPONENT_MAP = {
   "fetch API": FetchAPI,
   axios: Axios,
   "custom Hook": CustomHook,
+  SWR: SWR,
 };
 
 export default function ApiCallSection({ selectExample }) {
