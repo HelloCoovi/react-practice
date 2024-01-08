@@ -2,10 +2,12 @@ import { useState } from "react";
 
 import FetchAPI from "./apiCallMethod/FetchAPI.jsx";
 import Axios from "./apiCallMethod/Axios.jsx";
+import CustomHook from "./apiCallMethod/customHook.jsx";
 
 const COMPONENT_MAP = {
   "fetch API": FetchAPI,
   axios: Axios,
+  "custom Hook": CustomHook,
 };
 
 export default function ApiCallSection({ selectExample }) {
