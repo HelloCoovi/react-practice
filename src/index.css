@@ -1,1 +1,10 @@
 @import url(./reset.css);
+
+body {
+  background-color: rgb(187, 187, 187);
+}
+
+button {
+  border: 0;
+  background-color: transparent;
+}
