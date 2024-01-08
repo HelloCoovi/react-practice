@@ -33,12 +33,6 @@ function App() {
           <MethodButton method={"fetch-method"} practiceView={practiceView}>
             API 호출
           </MethodButton>
-          <MethodButton method={"test1"} practiceView={practiceView}>
-            test1
-          </MethodButton>
-          <MethodButton method={"test2"} practiceView={practiceView}>
-            test2
-          </MethodButton>
         </nav>
         <div className="content-container">
           <SelectCodeSection selectedMethod={practiceView} />
